@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="Fisheye">
-		<class>model.CruBaseStarModel</class>
-		<class>model.CruChangesetComment</class>
-		<class>model.CruComment</class>
-		<class>model.CruCommentField</class>
-		<class>model.CruCommentFieldPK</class>
-		<class>model.CruCommentReadStatus</class>
-		<class>model.CruCommitterUserMapping</class>
-		<class>model.CruCommitterUserMappingPK</class>
-		<class>model.CruCommitNotification</class>
-		<class>model.CruContentRoot</class>
-		<class>model.CruFeindexMsg</class>
-		<class>model.CruField</class>
-		<class>model.CruFileReadStatus</class>
-		<class>model.CruFrx</class>
-		<class>model.CruFrxComment</class>
-		<class>model.CruFrxRevision</class>
-		<class>model.CruFrDetail</class>
-		<class>model.CruFrDetailPK</class>
-		<class>model.CruGlobalGroupPermission</class>
-		<class>model.CruGlobalGroupPermissionPK</class>
-		<class>model.CruGlobalUserPermission</class>
-		<class>model.CruGlobalUserPermissionPK</class>
-		<class>model.CruInlineComment</class>
-		<class>model.CruInlineCommentToFrxRev</class>
-		<class>model.CruInvitee</class>
-		<class>model.CruLoginCookie</class>
-		<class>model.CruLogitem</class>
-		<class>model.CruMetricDefinition</class>
-		<class>model.CruNotification</class>
-		<class>model.CruPatch</class>
-		<class>model.CruPatchRevision</class>
-		<class>model.CruPatchRevisionPK</class>
-		<class>model.CruPermScheme</class>
-		<class>model.CruProject</class>
-		<class>model.CruProjAllowedGrp</class>
-		<class>model.CruProjDefaultGrp</class>
-		<class>model.CruPsAllUser</class>
-		<class>model.CruPsAllUserPK</class>
-		<class>model.CruPsAnon</class>
-		<class>model.CruPsAnonPK</class>
-		<class>model.CruPsGroup</class>
-		<class>model.CruPsGroupPK</class>
-		<class>model.CruPsReviewRole</class>
-		<class>model.CruPsReviewRolePK</class>
-		<class>model.CruPsUser</class>
-		<class>model.CruPsUserPK</class>
-		<class>model.CruRecentlyVisited</class>
-		<class>model.CruRecentlyVisitedPK</class>
-		<class>model.CruRecipient</class>
-		<class>model.CruRepositoryProperty</class>
-		<class>model.CruRepoGroupPerm</class>
-		<class>model.CruRepoGroupPermPK</class>
-		<class>model.CruRepoUserPerm</class>
-		<class>model.CruRepoUserPermPK</class>
-		<class>model.CruReview</class>
-		<class>model.CruReviewField</class>
-		<class>model.CruReviewFieldPK</class>
-		<class>model.CruReviewParticipant</class>
-		<class>model.CruReviewProperty</class>
-		<class>model.CruRevision</class>
-		<class>model.CruRevpermaid</class>
-		<class>model.CruRevpermaidPK</class>
-		<class>model.CruStateChange</class>
-		<class>model.CruStoredPath</class>
-		<class>model.CruUploadItem</class>
-		<class>model.CruUser</class>
-		<class>model.CruUserAppLink</class>
-		<class>model.CruUserProfile</class>
-		<class>model.CruUserRepoProperty</class>
-		<class>model.CruUserRepoPropertyPK</class>
-		<class>model.CruUserSetting</class>
-		<class>model.CruUserSettingPK</class>
-		<class>model.CruVersion</class>
-		<class>model.CruWatch</class>
+	<persistence-unit name="Fisheye" transaction-type="RESOURCE_LOCAL">
+		<class> be.beniben.cruciblereport.model.CruBaseStarModel</class>
+		<class> be.beniben.cruciblereport.model.CruChangesetComment</class>
+		<class> be.beniben.cruciblereport.model.CruComment</class>
+		<class> be.beniben.cruciblereport.model.CruCommentField</class>
+		<class> be.beniben.cruciblereport.model.CruCommentFieldPK</class>
+		<class> be.beniben.cruciblereport.model.CruCommentReadStatus</class>
+		<class> be.beniben.cruciblereport.model.CruCommitterUserMapping</class>
+		<class> be.beniben.cruciblereport.model.CruCommitterUserMappingPK</class>
+		<class> be.beniben.cruciblereport.model.CruCommitNotification</class>
+		<class> be.beniben.cruciblereport.model.CruContentRoot</class>
+		<class> be.beniben.cruciblereport.model.CruFeindexMsg</class>
+		<class> be.beniben.cruciblereport.model.CruField</class>
+		<class> be.beniben.cruciblereport.model.CruFileReadStatus</class>
+		<class> be.beniben.cruciblereport.model.CruFrx</class>
+		<class> be.beniben.cruciblereport.model.CruFrxComment</class>
+		<class> be.beniben.cruciblereport.model.CruFrxRevision</class>
+		<class> be.beniben.cruciblereport.model.CruFrDetail</class>
+		<class> be.beniben.cruciblereport.model.CruFrDetailPK</class>
+		<class> be.beniben.cruciblereport.model.CruGlobalGroupPermission</class>
+		<class> be.beniben.cruciblereport.model.CruGlobalGroupPermissionPK</class>
+		<class> be.beniben.cruciblereport.model.CruGlobalUserPermission</class>
+		<class> be.beniben.cruciblereport.model.CruGlobalUserPermissionPK</class>
+		<class> be.beniben.cruciblereport.model.CruInlineComment</class>
+		<class> be.beniben.cruciblereport.model.CruInlineCommentToFrxRev</class>
+		<class> be.beniben.cruciblereport.model.CruLoginCookie</class>
+		<class> be.beniben.cruciblereport.model.CruLogitem</class>
+		<class> be.beniben.cruciblereport.model.CruMetricDefinition</class>
+		<class> be.beniben.cruciblereport.model.CruNotification</class>
+		<class> be.beniben.cruciblereport.model.CruPatch</class>
+		<class> be.beniben.cruciblereport.model.CruPatchRevision</class>
+		<class> be.beniben.cruciblereport.model.CruPatchRevisionPK</class>
+		<class> be.beniben.cruciblereport.model.CruPermScheme</class>
+		<class> be.beniben.cruciblereport.model.CruProject</class>
+		<class> be.beniben.cruciblereport.model.CruPsAllUser</class>
+		<class> be.beniben.cruciblereport.model.CruPsAllUserPK</class>
+		<class> be.beniben.cruciblereport.model.CruPsAnon</class>
+		<class> be.beniben.cruciblereport.model.CruPsAnonPK</class>
+		<class> be.beniben.cruciblereport.model.CruPsGroup</class>
+		<class> be.beniben.cruciblereport.model.CruPsGroupPK</class>
+		<class> be.beniben.cruciblereport.model.CruPsReviewRole</class>
+		<class> be.beniben.cruciblereport.model.CruPsReviewRolePK</class>
+		<class> be.beniben.cruciblereport.model.CruPsUser</class>
+		<class> be.beniben.cruciblereport.model.CruPsUserPK</class>
+		<class> be.beniben.cruciblereport.model.CruRecentlyVisited</class>
+		<class> be.beniben.cruciblereport.model.CruRecentlyVisitedPK</class>
+		<class> be.beniben.cruciblereport.model.CruRecipient</class>
+		<class> be.beniben.cruciblereport.model.CruRepositoryProperty</class>
+		<class> be.beniben.cruciblereport.model.CruRepoGroupPerm</class>
+		<class> be.beniben.cruciblereport.model.CruRepoGroupPermPK</class>
+		<class> be.beniben.cruciblereport.model.CruRepoUserPerm</class>
+		<class> be.beniben.cruciblereport.model.CruRepoUserPermPK</class>
+		<class> be.beniben.cruciblereport.model.CruReview</class>
+		<class> be.beniben.cruciblereport.model.CruReviewField</class>
+		<class> be.beniben.cruciblereport.model.CruReviewFieldPK</class>
+		<class> be.beniben.cruciblereport.model.CruReviewParticipant</class>
+		<class> be.beniben.cruciblereport.model.CruReviewProperty</class>
+		<class> be.beniben.cruciblereport.model.CruRevision</class>
+		<class> be.beniben.cruciblereport.model.CruRevpermaid</class>
+		<class> be.beniben.cruciblereport.model.CruRevpermaidPK</class>
+		<class> be.beniben.cruciblereport.model.CruStateChange</class>
+		<class> be.beniben.cruciblereport.model.CruStoredPath</class>
+		<class> be.beniben.cruciblereport.model.CruUploadItem</class>
+		<class> be.beniben.cruciblereport.model.CruUser</class>
+		<class> be.beniben.cruciblereport.model.CruUserAppLink</class>
+		<class> be.beniben.cruciblereport.model.CruUserProfile</class>
+		<class> be.beniben.cruciblereport.model.CruUserRepoProperty</class>
+		<class> be.beniben.cruciblereport.model.CruUserRepoPropertyPK</class>
+		<class> be.beniben.cruciblereport.model.CruUserSetting</class>
+		<class> be.beniben.cruciblereport.model.CruUserSettingPK</class>
+		<class> be.beniben.cruciblereport.model.CruVersion</class>
+		<class> be.beniben.cruciblereport.model.CruWatch</class>
+
+		<!--Converters-->
+		<class>be.beniben.cruciblereport.model.converter.LocalDateTimeAttributeConverter</class>
 	</persistence-unit>
 </persistence>
