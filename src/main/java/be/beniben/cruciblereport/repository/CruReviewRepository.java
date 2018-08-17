@@ -12,6 +12,11 @@ public interface CruReviewRepository extends JpaRepository<CruReview,Long>{
 
     List<CruReview> findAllBycruCreateDateBetween(LocalDateTime start,LocalDateTime end);
 
+    @Query(value="select   TO_CHAR((TO_DATE('1970-01-01','YYYY-MM-DD') + cru_create_date / 86400000),'YYYY-MM') as Mois, count(CRU_REVIEW_ID) from CRU_REVIEW " +
+          " WHERE (TO_DATE('1970-01-01','YYYY-MM-DD') + cru_create_date / 86400000) <= to_date(?1,'dd/mm/yyyy')" +
+            " group by  TO_CHAR((TO_DATE('1970-01-01','YYYY-MM-DD') + cru_create_date / 86400000),'YYYY-MM') order by Mois asc",nativeQuery = true)
+    List<Object[]> findTotalReviewsByMonth(@Param("1") String date);
+
     @Query(value="select utilisateur.CRU_USER_NAME,count(utilisateur.CRU_USER_NAME) as nbreview from cru_review review" +
             ",cru_review_participant participant,cru_user utilisateur" +
            " where" +
@@ -71,4 +76,15 @@ public interface CruReviewRepository extends JpaRepository<CruReview,Long>{
             " and  participant.cru_user = utilisateur.cru_user_id  " +
             " and participant.CRU_REVIEWER = 1 group by utilisateur.CRU_USER_NAME order by totalTime desc ",nativeQuery = true)
     List<Object[]> getTotalTimePassedByMonthByReviewer(String mois);
+
+
+    @Query(value = "select TO_CHAR((TO_DATE('1970-01-01','YYYY-MM-DD') + review.cru_create_date / 86400000),'YYYY-MM') as mois,(round((Sum(participant.CRU_TIME_SPENT)/1000 / 60))) as total  from CRU_REVIEW review ,CRU_REVIEW_PARTICIPANT participant "
+            + " where"
+            + " review.cru_review_id= participant.cru_review_id"
+            + " and participant.CRU_REVIEWER = 1"
+            + " and (TO_DATE('1970-01-01','YYYY-MM-DD') + cru_create_date / 86400000) <= to_date(?1,'dd/mm/yyyy')"
+            + " group by TO_CHAR((TO_DATE('1970-01-01','YYYY-MM-DD') + review.cru_create_date / 86400000),'YYYY-MM')"
+            + " order by mois",nativeQuery = true)
+    List<Object[]> findTotalSpentTimeByMonth(@Param("1") String date);
+
 }

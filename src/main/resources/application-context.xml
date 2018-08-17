@@ -14,7 +14,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 	<tx:annotation-driven/>
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver" />
-		<property name="url" value="jdbc:oracle:thin:@SRV09:1521:TOOLS" />
+		<property name="url" value="jdbc:oracle:thin:@TOOLS-07:1521:ATLASSIAN" />
 		<property name="username" value="fecru" />
 		<property name="password" value="fecru" />
 	</bean>
@@ -33,7 +33,7 @@ http://www.springframework.org/schema/tx http://www.springframework.org/schema/t
 		</property>
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter">
-				<property name="showSql" value="true" />
+				<property name="showSql" value="false" />
 			</bean>
 		</property>
 	</bean>
